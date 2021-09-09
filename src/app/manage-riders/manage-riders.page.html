@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons  slot="start" >
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table style="margin-top: 25px; width: 80%;">
+    <thead>
+    <tr style="border: 1px solid orange; background-color: silver; text-align: left;">
+      <th>Full-name</th>
+      <th>Number</th>
+      <th>Email</th>
+      <th>Action</th></tr>
+    </thead>
+  <tbody>
+      <tr *ngFor="let data of users" >
+      <td><ul style="margin-left: -35px;">{{data.displayName}}</ul></td>
+      <td><ul style="margin-left: -35px;">{{data.PhoneNumber}}</ul></td>
+      <td><ul style="margin-left: -35px;">{{data.email}} </ul></td>
+      <td><ion-icon style="color: red; margin-left: 20px;"  (click)="delete(data.email)" onload="false" class="btn btn-danger" aria-hidden="true"  name="trash-outline"></ion-icon></td>
+      <!-- <td><a role="button" (click)="edit(email)" onload="false" class="btn btn-danger" aria-hidden="true" >Update</a></td> -->
+
+    </tr>
+
+    </tbody>
+  </table>
+</ion-content>

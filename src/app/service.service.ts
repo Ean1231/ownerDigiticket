@@ -10,6 +10,7 @@ export class ServiceService {
   driverPosition = [];
   coords = [];
   email;
+  drivers = [];
 
   constructor(public auth: AngularFireAuth,
     public firestore: AngularFirestore,
@@ -30,6 +31,36 @@ export class ServiceService {
         this.coords = items;
         console.log(items);
         res(this.coords) ;
+        });
+    });
+  }
+
+  promo(){
+    return new Promise((res, rej)=>{
+      this.firestore.collection('Promo codes').valueChanges().subscribe((items: any) => {
+        this.coords = items;
+        console.log(items);
+        res(this.coords) ;
+        });
+    });
+  }
+
+  getUsers(){
+    return new Promise((res, rej)=>{
+      this.firestore.collection('users').valueChanges().subscribe((items: any) => {
+        this.coords = items;
+        console.log(items);
+        res(this.coords) ;
+        });
+    });
+  }
+
+  getDrivers(){
+    return new Promise((res, rej)=>{
+      this.firestore.collection('driverPosition').valueChanges().subscribe((items: any) => {
+        this.drivers = items;
+        //console.log(items)
+        res(this.drivers) ;
         });
     });
   }

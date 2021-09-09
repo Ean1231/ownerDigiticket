@@ -1,3 +1,42 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+
+        <ion-list id="inbox-list">
+          <ion-list-header ></ion-list-header><br>
+          <ion-note></ion-note>
+<hr>
+          <ion-menu-toggle auto-hide="false" >
+            <ion-list [routerLink]="['/home']" id="labels-list">
+              <ion-icon name="home-outline" style="margin-right: 10px;"></ion-icon>Home
+             </ion-list>
+            <ion-list [routerLink]="['/manage-drivers']" id="labels-list">
+              <ion-icon name="speedometer-outline" style="margin-right: 10px;"></ion-icon> Drivers
+             </ion-list>
+            <ion-list [routerLink]="['/manage-riders']" id="labels-list">
+              <ion-icon name="car-sport-outline" style="margin-right: 10px;"></ion-icon> Riders
+             </ion-list>
+            <!-- <ion-list id="labels-list">
+              <ion-icon name="flag-outline"></ion-icon> Set Destination
+            </ion-list> -->
+            <ion-list [routerLink]="['/trips']" id="labels-list">
+              <ion-icon name="card-outline" style="margin-right: 10px;"></ion-icon> Trips
+            </ion-list>
+            <ion-list [routerLink]="['/show-profile']" id="labels-list">
+              <ion-icon name="person-outline" style="margin-right: 10px;"></ion-icon> View Profile
+            </ion-list>
+            <ion-list [routerLink]="['/rating-system']" id="labels-list">
+              <ion-icon name="star-half-outline" style="margin-right: 10px;"></ion-icon> Rate driver
+            </ion-list>
+
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+         <ion-icon name="log-out-outline" style="margin-right: 10px;"></ion-icon> Logout
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane></ion-app>

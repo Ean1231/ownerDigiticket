@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>trips</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div >
+  <table style="margin-top: 25px; width: 80%;">
+    <thead>
+    <tr style="border: 1px solid orange;  background-color: silver; text-align: left;">
+      <th>Date</th>
+      <th>Location</th>
+      <th>rider</th>
+      <th>Driver</th>
+    </tr>
+    </thead>
+  <tbody>
+      <tr *ngFor = 'let data of coords' >
+      <td><ul style="margin-left: -35px;">{{data.date}}</ul></td>
+      <td><ul style="margin-left: -35px;" >{{data.latitude}}</ul></td>
+      <td><ul style="margin-left: -35px;">{{data.name}} </ul></td>
+      <td><ul style="margin-left: -35px;">Driver name </ul></td>
+
+
+
+
+
+      <!-- <td><a role="button" (click)="edit(email)" onload="false" class="btn btn-danger" aria-hidden="true" >Update</a></td> -->
+
+    </tr>
+
+    </tbody>
+  </table>
+</div>
+</ion-content>

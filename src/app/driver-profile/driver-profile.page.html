@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Driver-Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div style=" width: 100%;  margin-top: 30px; ">
+
+    <ion-segment [(ngModel)]="selectedTabs" color="secondary">
+      <ion-segment-button value="profile">
+        <ion-label>Profile</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="documents">
+        <ion-label>Documents</ion-label>
+      </ion-segment-button>
+
+    </ion-segment>
+<br><br><br><br>
+
+
+<div *ngIf = "selectedTabs === 'profile'">
+  <div style="display: flex; border: 1px sloid black;justify-content: space-between; flex-direction: column;" >
+    <div style="margin-left: 50px;">
+      <label>Name:</label>
+      <h3>{{showdata.name}}</h3>
+    </div>
+
+    <div style="margin-left: 50%; margin-top: -68px;">
+      <label>Contact Number:</label>
+      <h3>{{showdata.phoneNumber}}</h3>
+    </div>
+  </div><br><br>
+
+  <div style="display: flex; justify-content: space-between; flex-direction: column;">
+    <div style="margin-left: 50px;">
+      <label>Email:</label>
+      <h3>{{showdata.email}}</h3>
+    </div>
+
+    <div style="margin-left: 50%; margin-top: -68px;">
+      <label>Car Registration:</label>
+      <h3>{{showdata.carNumber}}</h3>
+    </div>
+  </div><br><br>
+
+  <div style="display: flex; justify-content: space-between; flex-direction: column;">
+    <div style="margin-left: 50px;">
+      <label>Car Model:</label>
+      <h3>{{showdata.carModel}}</h3>
+    </div>
+
+    <div style="margin-left: 50%; margin-top: -68px;">
+      <label>Car Color:</label>
+      <h3>{{showdata.color}}</h3>
+    </div>
+  </div>
+</div>
+
+
+
+<div style="display: flexbox;" *ngIf = "selectedTabs === 'documents'">
+
+ ID DOC: <img src={{showdata.img}}><br><br><br>
+Licence: <img src="{{showdata.img}}" alt=""><br><br><br>
+pictures of car: <img src="" alt="">
+    </div>
+  </div>
+
+
+
+
+</ion-content>

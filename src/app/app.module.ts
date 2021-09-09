@@ -3,6 +3,7 @@
  import { RouteReuseStrategy } from '@angular/router';
 
  import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
  import { AppComponent } from './app.component';
  import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,8 @@
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
+    FormsModule,
+    ReactiveFormsModule
     ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

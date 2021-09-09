@@ -1,27 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons  slot="start" >
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
 
+<div style="display:flex;">
+  <ion-card [routerLink]="'/manage-drivers'" style="height: 250px; width: 250px; text-align: center; ">
+    <h4 style="margin-top: 110px;">Manage Drivers</h4>
+      </ion-card>
+      <ion-card [routerLink]="'/manage-riders'" style="height: 250px; width: 250px; text-align: center;">
+        <h4 style="margin-top: 110px;">Manage Riders</h4>
+          </ion-card>
+          <ion-card [routerLink]="'/trips'" style="height: 250px; width: 250px; text-align: center; ">
+            <h4 style="margin-top: 110px;">Trips</h4>
+              </ion-card>
+</div>
 
-  <ion-card *ngFor = "let data of coords">
-    requested by:    {{data.name}}      <br>
-    Accepted by:           <br>
-    date:
-
-
-    <div #map id='map' style="height: 200px"></div>
-  </ion-card>
 
 
 </ion-content>

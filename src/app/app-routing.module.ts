@@ -15,6 +15,22 @@ const routes: Routes = [
     path: 'service',
     loadChildren: () => import('./service/service.module').then( m => m.ServicePageModule)
   },
+  {
+    path: 'manage-drivers',
+    loadChildren: () => import('./manage-drivers/manage-drivers.module').then( m => m.ManageDriversPageModule)
+  },
+  {
+    path: 'manage-riders',
+    loadChildren: () => import('./manage-riders/manage-riders.module').then( m => m.ManageRidersPageModule)
+  },
+  {
+    path: 'trips',
+    loadChildren: () => import('./trips/trips.module').then( m => m.TripsPageModule)
+  },
+  {
+    path: 'driver-profile',
+    loadChildren: () => import('./driver-profile/driver-profile.module').then( m => m.DriverProfilePageModule)
+  },
 ];
 
 @NgModule({
