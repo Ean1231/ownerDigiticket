@@ -19,7 +19,7 @@
       <th>Status</th>
       <th>Delete</th>
       <th>View</th>
-      <th>Action</th>
+      
     </tr>
     </thead>
   <tbody>
@@ -34,15 +34,9 @@
 
     <td><ion-icon style="color: red; margin-left: 20px;"  (click)="presentAlert(data.email)" onload="false" class="btn btn-danger" aria-hidden="true"  name="trash-outline"></ion-icon></td>
     <td><ion-icon name="eye-outline" style="color: blue" (click)="details(data)"></ion-icon></td>
-    
-      <td>
-        <div *ngIf="approved; else elseBlock">
-          <button style="border:2px solid green; color: white;" (click)="approveDriver(email)">Approved</button>
-        </div>
-        <ng-template #elseBlock>
-          <button style="border:2px solid blue;" (click)="approveDriver(email)" >pending</button>
 
-        </ng-template>
+      <td>
+
       </td>
 
 
