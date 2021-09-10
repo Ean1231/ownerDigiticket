@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>trips</ion-title>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="search-outline"></ion-icon>
+      <ion-input (ionInput)="filterData($event)" placeholder="Search Driver"></ion-input>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
@@ -9,19 +12,24 @@
 <div >
   <table style="margin-top: 25px; width: 80%;">
     <thead>
+
     <tr style="border: 1px solid orange;  background-color: silver; text-align: left;">
+
+
       <th>Date</th>
-      <th>Location</th>
+      <th>Distance</th>
       <th>rider</th>
       <th>Driver</th>
+      <th>price</th>
     </tr>
     </thead>
   <tbody>
       <tr *ngFor = 'let data of coords' >
       <td><ul style="margin-left: -35px;">{{data.date}}</ul></td>
-      <td><ul style="margin-left: -35px;" >{{data.latitude}}</ul></td>
+      <td><ul style="margin-left: -35px;" >{{data.killos}}</ul></td>
       <td><ul style="margin-left: -35px;">{{data.name}} </ul></td>
       <td><ul style="margin-left: -35px;">Driver name </ul></td>
+      <td><ul style="margin-left: -35px;">R {{data.price}}</ul></td>
 
 
 

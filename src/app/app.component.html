@@ -4,31 +4,32 @@
       <ion-content>
 
         <ion-list id="inbox-list">
-          <ion-list-header ></ion-list-header><br>
-          <ion-note></ion-note>
-<hr>
-          <ion-menu-toggle auto-hide="false" >
+          <ion-list-header ><h1 style="color: orange;">Kortex taxi Dashboard</h1></ion-list-header><br>
+
+          <hr>
+
+          <ion-menu-toggle auto-hide="false" color="secondary">
             <ion-list [routerLink]="['/home']" id="labels-list">
-              <ion-icon name="home-outline" style="margin-right: 10px;"></ion-icon>Home
+              <h4 ><ion-icon name="home-outline" style="margin-right: 10px;"></ion-icon>Home</h4>
              </ion-list>
             <ion-list [routerLink]="['/manage-drivers']" id="labels-list">
-              <ion-icon name="speedometer-outline" style="margin-right: 10px;"></ion-icon> Drivers
+               <h4 ><ion-icon name="speedometer-outline" style="margin-right: 10px;"></ion-icon> Drivers</h4>
              </ion-list>
             <ion-list [routerLink]="['/manage-riders']" id="labels-list">
-              <ion-icon name="car-sport-outline" style="margin-right: 10px;"></ion-icon> Riders
+              <h4 ><ion-icon name="car-sport-outline" style="margin-right: 10px;"></ion-icon> Riders</h4>
              </ion-list>
             <!-- <ion-list id="labels-list">
               <ion-icon name="flag-outline"></ion-icon> Set Destination
             </ion-list> -->
             <ion-list [routerLink]="['/trips']" id="labels-list">
-              <ion-icon name="card-outline" style="margin-right: 10px;"></ion-icon> Trips
+              <h4 ><ion-icon name="card-outline" style="margin-right: 10px;"></ion-icon> Trips</h4>
             </ion-list>
-            <ion-list [routerLink]="['/show-profile']" id="labels-list">
+            <!-- <ion-list [routerLink]="['/show-profile']" id="labels-list">
               <ion-icon name="person-outline" style="margin-right: 10px;"></ion-icon> View Profile
             </ion-list>
             <ion-list [routerLink]="['/rating-system']" id="labels-list">
               <ion-icon name="star-half-outline" style="margin-right: 10px;"></ion-icon> Rate driver
-            </ion-list>
+            </ion-list> -->
 
           </ion-menu-toggle>
         </ion-list>

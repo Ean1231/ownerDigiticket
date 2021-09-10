@@ -13,7 +13,10 @@
  import { AngularFireStorageModule } from '@angular/fire/storage';
  import { AngularFireAuthModule } from '@angular/fire/auth';
  import {environment} from '../environments/environment';
-
+ import { FontAwesomeModule, FaIconLibrary  } from '@fortawesome/angular-fontawesome';
+ import { library } from '@fortawesome/fontawesome-svg-core';
+ import { fab } from '@fortawesome/free-brands-svg-icons';
+ library.add(fab);
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,8 +24,11 @@
     AngularFirestoreModule,
     AngularFireStorageModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule,
+
     ],
+
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

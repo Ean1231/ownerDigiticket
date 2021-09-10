@@ -65,7 +65,7 @@ filterData(ev: any) {
 
   const val = ev.target.value;
   if (val && val.trim() !== '') {
-    this.coords = this.coords.filter((item) => item.type.toLowerCase().indexOf(val.toLowerCase()) > -1);
+    this.coords = this.coords.filter((item) => item.name.toLowerCase().indexOf(val.toLowerCase()) > -1);
 
   }
 }
